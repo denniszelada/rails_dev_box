@@ -1,3 +1,1 @@
 forge "http://forge.puppetlabs.com"
-
-mod 'ruby', 	:git => 'https://github.com/puppetlabs/puppetlabs-ruby.git'

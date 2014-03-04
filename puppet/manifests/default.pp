@@ -1,6 +1,7 @@
 $ar_databases = ['activerecord_unittest', 'activerecord_unittest2']
-$as_vagrant   = 'sudo -u vagrant -H bash -l -c'
+$as_vagrant   = 'su - vagrant -c'
 $home         = '/home/vagrant'
+$source_rvm   = 'source ~/.rvm/scripts/rvm &&'
 
 Exec {
   path => ['/usr/sbin', '/usr/bin', '/sbin', '/bin']
@@ -35,13 +36,21 @@ package { 'git-core':
   ensure => installed
 }
 
-# --- Ruby ---------------------------------------------------------------------
+# --- Ruby ----------------------------------------------------------------------
 
-class { 'ruby':
-      gems_version  => 'latest'
-    }
+exec { 'install_rvm':
+  command => "${as_vagrant} 'curl -L https://get.rvm.io | bash -s stable'",
+  require => Package['curl']
+}
 
-#exec { "${as_vagrant} 'gem install bundler --no-rdoc --no-ri'":
-#  creates => "${home}/.rvm/bin/bundle",
-#  require => Exec['install_ruby']
-#}
+exec { 'install_ruby':
+  command => "${as_vagrant} '${source_rvm} rvm install 2.0.0-p353'",
+  require => Exec['install_rvm']
+}
+
+# --- Gems ----------------------------------------------------------------------
+
+exec { 'install_bundler':
+  command => "${as_vagrant} '${source_rvm} gem install bundler --no-rdoc --no-ri'",
+  require => Exec['install_ruby']
+}
