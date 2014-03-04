@@ -1,0 +1,10 @@
+GIT
+  remote: https://github.com/puppetlabs/puppetlabs-ruby.git
+  ref: master
+  sha: d563eef028c624e7aef25934282cc273501f143a
+  specs:
+    ruby (0.1.1)
+
+DEPENDENCIES
+  ruby (>= 0)
+
