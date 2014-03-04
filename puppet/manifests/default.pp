@@ -65,12 +65,12 @@ exec { 'install_ruby':
   # The rvm executable is more suitable for automated installs.
   #
   # use a ruby patch level known to have a binary
-  command => "${as_vagrant} '${home}/.rvm/bin/rvm install ruby-2.0.0-p353 --binary --autolibs=enabled && rvm alias create default 2.0'",
+  command => "${as_vagrant} 'source ${home}/.rvm/scripts/rvm && rvm install ruby-2.0.0-p353 --binary --autolibs=enabled && rvm alias create default 2.0'",
   creates => "${home}/.rvm/bin/ruby",
   require => Exec['install_rvm']
 }
 
-exec { "${as_vagrant} 'gem install bundler --no-rdoc --no-ri'":
+exec { "${as_vagrant} 'source ${home}/.rvm/scripts/rvm && rvm use 2.0 && gem install bundler --no-rdoc --no-ri'":
   creates => "${home}/.rvm/bin/bundle",
   require => Exec['install_ruby']
 }
