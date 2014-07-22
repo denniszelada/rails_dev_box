@@ -1,8 +1,8 @@
 import 'browsy.pp'
 
 class { 'browsy':
-  user        => 'vagrant',
-  environment => 'development',
+  user        => 'ubuntu',
+  environment => 'staging',
   application => 'browsy',
   app_dir     => 'browsy',
   pid         => 'browsy.pid',

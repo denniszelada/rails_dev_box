@@ -1,0 +1,96 @@
+FORGE
+  remote: http://forge.puppetlabs.com
+  specs:
+    maestrodev/wget (1.4.1)
+    puppetlabs/apt (1.4.2)
+      puppetlabs/stdlib (>= 2.2.1)
+    puppetlabs/concat (1.1.0)
+      puppetlabs/stdlib (>= 4.0.0)
+    puppetlabs/firewall (1.1.1)
+    puppetlabs/gcc (0.1.0)
+    puppetlabs/stdlib (4.2.1)
+
+GIT
+  remote: git@github.com:browsy/puppet_build_essential.git
+  ref: master
+  sha: f5eb353976b08386b8a6f18bb85cc30a82d16be3
+  specs:
+    build_essential (0.0.1)
+
+GIT
+  remote: https://github.com/blue-kite/puppet-bluekite-ruby.git
+  ref: master
+  sha: 23d43013770f90fabed3e66f8a11421412a2f1ba
+  specs:
+    bluekite_ruby (0.0.1)
+
+GIT
+  remote: https://github.com/maestrodev/puppet-wget.git
+  ref: master
+  sha: e165bf529bc0d4c3dd075536e3fb452edee9c13b
+  specs:
+    wget (1.4.2)
+
+GIT
+  remote: https://github.com/puppetlabs/puppetlabs-apt
+  ref: master
+  sha: 4929de0d4211bf4c0a43334b140eb72044c893f6
+  specs:
+    apt (1.4.2)
+      puppetlabs/stdlib (>= 2.2.1)
+
+GIT
+  remote: https://github.com/puppetlabs/puppetlabs-concat
+  ref: master
+  sha: f70881fbfd01c404616e9e4139d98dad78d5a918
+  specs:
+    concat (1.1.0)
+      puppetlabs/stdlib (>= 4.2.0)
+
+GIT
+  remote: https://github.com/puppetlabs/puppetlabs-nodejs.git
+  ref: master
+  sha: 816f7ee2a3b4439378632d1c2b5df8be23b61af6
+  specs:
+    nodejs (0.5.0)
+      puppetlabs/apt (>= 0.0.3)
+      puppetlabs/stdlib (>= 2.0.0)
+
+GIT
+  remote: https://github.com/puppetlabs/puppetlabs-postgresql.git
+  ref: master
+  sha: dcd1741c0378e2261b9c7ba57e6477db14ace649
+  specs:
+    postgresql (3.3.3)
+      puppetlabs/apt (< 2.0.0, >= 1.1.0)
+      puppetlabs/concat (< 2.0.0, >= 1.0.0)
+      puppetlabs/firewall (>= 0.0.4)
+      puppetlabs/stdlib (< 5.0.0, >= 3.2.0)
+
+GIT
+  remote: https://github.com/puppetlabs/puppetlabs-stdlib.git
+  ref: master
+  sha: f9f6e92dffa8364cfbbd92a6a65f4be4ef176d2c
+  specs:
+    stdlib (4.2.1)
+
+GIT
+  remote: https://github.com/thomasvandoren/puppet-redis.git
+  ref: master
+  sha: 17308f1be093cd2fa003b5e53a99c22b61e4e24e
+  specs:
+    redis (0.0.9)
+      maestrodev/wget (>= 0)
+      puppetlabs/gcc (>= 0)
+
+DEPENDENCIES
+  apt (>= 0)
+  bluekite_ruby (>= 0)
+  build_essential (>= 0)
+  concat (>= 0)
+  nodejs (>= 0)
+  postgresql (>= 0)
+  redis (>= 0)
+  stdlib (>= 0)
+  wget (>= 0)
+

@@ -1,1 +1,11 @@
 forge "http://forge.puppetlabs.com"
+
+mod 'apt',             :git => 'https://github.com/puppetlabs/puppetlabs-apt'
+mod 'stdlib',          :git => 'https://github.com/puppetlabs/puppetlabs-stdlib.git'
+mod 'nodejs',          :git => 'https://github.com/puppetlabs/puppetlabs-nodejs.git'
+mod 'concat',          :git => 'https://github.com/puppetlabs/puppetlabs-concat'
+mod 'wget',            :git => 'https://github.com/maestrodev/puppet-wget.git'
+mod 'bluekite_ruby',   :git => 'https://github.com/blue-kite/puppet-bluekite-ruby.git'
+mod 'build_essential', :git => 'git@github.com:browsy/puppet_build_essential.git'
+mod 'postgresql',      :git => 'https://github.com/puppetlabs/puppetlabs-postgresql.git'
+mod 'redis',           :git => 'https://github.com/thomasvandoren/puppet-redis.git'
